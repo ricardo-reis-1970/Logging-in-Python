@@ -1,0 +1,38 @@
+[loggers]
+keys=root,sampleLogger
+
+[handlers]
+keys=rootHandler,sampleHandler
+
+[formatters]
+keys=rootFormatter,sampleFormatter
+
+[logger_root]
+level=DEBUG
+handlers=rootHandler
+
+[handler_rootHandler]
+class=StreamHandler
+level=DEBUG
+formatter=rootFormatter
+args=(sys.stdout,)
+
+[formatter_rootFormatter]
+format=%(asctime)s - %(name)s - %(levelname)s - %(message)s
+
+[logger_sampleLogger]
+level=DEBUG
+handlers=sampleHandler
+qualname=sampleLogger
+propagate=0
+
+[handler_sampleHandler]
+class=StreamHandler
+level=DEBUG
+formatter=sampleFormatter
+args=(sys.stdout,)
+
+[formatter_sampleFormatter]
+format=%(asctime)s: %(levelname)s - %(name)s - %(message)s
+datefmt=%d %b %Y, %H:%M:%S
+

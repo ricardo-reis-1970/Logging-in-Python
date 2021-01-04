@@ -1,0 +1,26 @@
+version: 1
+formatters:
+  rootFormatter:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  sampleFormatter:
+    format: '%(asctime)s: %(levelname)s - %(name)s - %(message)s'
+    datefmt: '%d %b %Y, %H:%M:%S'
+handlers:
+  rootHandler:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: rootFormatter
+    stream: ext://sys.stdout
+  sampleHandler:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: sampleFormatter
+    stream: ext://sys.stdout
+loggers:
+  root:
+    level: DEBUG
+    handlers: [rootHandler]
+  sampleLogger:
+    level: DEBUG
+    handlers: [sampleHandler]
+    propagate: no
