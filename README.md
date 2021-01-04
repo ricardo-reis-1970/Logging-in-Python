@@ -1,4 +1,4 @@
-# Real Python $-$ Logging in Python
+# Real Python — Logging in Python
 
 This is a redo of the original source files for the small, compact and absolutely excellent course (Logging in Python)[https://realpython.com/courses/logging-python/], by Austin Cepalia from Real Python. Here are the (source files)[https://realpython.com/python-logging/], by Abhinav Ajitsaria, also with Real Python.
 
